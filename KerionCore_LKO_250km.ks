@@ -3,6 +3,8 @@
 CLEARSCREEN.
 PRINT "Starting countdown".
 
+LOCK THROTTLE TO 1.0.
+
 FROM {local countdown is 10.} UNTIL countdown = 0 STEP {SET countdown to countdown - 1.} DO {
     PRINT countdown.
     WAIT 1.
