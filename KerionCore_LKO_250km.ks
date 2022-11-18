@@ -24,10 +24,10 @@ LOCK STEERING TO STEER.
 
 // Set the apoapsis at 250 kilometers above Kerbin.
 UNTIL SHIP:APOAPSIS > 250000 {
-    SET CURRENT_ALT_GROUND TO ROUND(MAX(0.001, ((ALTITUDE-GEOPOSITION:TERRAINHEIGHT) - 100)),3).
-    // This equation was taken from the Wikipedia article for the `y` parameter of cycloid curve
+    SET CURRENT_ALTITUDE_GROUND TO ROUND(MAX(0.001, ((ALTITUDE-GEOPOSITION:TERRAINHEIGHT) - 100)),3).
+    // This equation was taken from the Wikipedia article for the `y` parameter of the cycloid curve
     // and resolved for `t` to get the tilt angle in radians for the current altitude.
-    SET STEER TO HEADING(90, ARCSIN(1 - CURRENT_ALT_GROUND / 125000)).
+    SET STEER TO HEADING(90, ARCSIN(1 - CURRENT_ALTITUDE_GROUND / 125000)).
 }.
 
 // NOTE that it is vital to not just let the script end right away
