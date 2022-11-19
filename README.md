@@ -11,3 +11,7 @@ For now, we'll use the following formula to calculate how much we need to pitch 
   is possible because you can style an SVG graphic by adding CSS in a `foreignObject` XML tag.
 -->
 <img src="https://space-resources.s3.fr-par.scw.cloud/cycloid_launch_curve.svg" height="64" />
+
+The equation shown here is a transformation of the [cycloid curve equation](https://en.wikipedia.org/wiki/Cycloid#Equations) for the `y` parameter, resolved for the tilt angle `t` which represents the eastward compass heading angle. The graph traced by this equation looks like this, where `y` represents the heading angle and `x` represents altitude in kilometers:
+
+<img src="https://space-resources.s3.fr-par.scw.cloud/cycloid_angle_graph.svg" height="300" />
