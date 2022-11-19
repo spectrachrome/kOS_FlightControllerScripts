@@ -14,6 +14,6 @@ For now, we'll use the following formula to calculate how much we need to pitch 
 
 This calculates the ascent angle from the planned apoapsis height and the current altitude. Retrieving the exact starting angle for a real gravity turn is a bit more difficult, so this will do for now.
 
-The equation shown here is the [cycloid curve equation](https://en.wikipedia.org/wiki/Cycloid#Equations) for the `y` parameter, which has been transformed to yield the tilt angle `θ` (referred to as `t` in the article) which represents how many degrees our spacecraft will pitch eastwards during the ascent. The graph traced by this equation looks like this, where the vertical parameter `θ` represents the heading angle in degrees and the horizontal paramater `x` represents altitude in kilometers:
+The equation shown here is the [cycloid curve equation](https://en.wikipedia.org/wiki/Cycloid#Equations) for the `y` parameter, which has been transformed to yield the tilt angle `θ` (referred to as `t` in the article) which represents how many degrees our spacecraft will pitch eastwards during the ascent. The graph traced by this equation looks like this, where the vertical parameter `θ` represents eastward heading angle in degrees and the horizontal paramater `x` represents altitude in kilometers:
 
 <img src="https://space-resources.s3.fr-par.scw.cloud/cycloid_angle_graph_v2.svg" width="100%" />
