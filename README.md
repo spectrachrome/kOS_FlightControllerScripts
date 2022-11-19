@@ -14,4 +14,4 @@ For now, we'll use the following formula to calculate how much we need to pitch 
 
 The equation shown here is a transformation of the [cycloid curve equation](https://en.wikipedia.org/wiki/Cycloid#Equations) for the `y` parameter, resolved for the tilt angle `t` (hereby referred to as `θ`) which represents how many degrees our spacecraft will pitch eastwards. The graph traced by this equation looks like this, where the vertical parameter `θ` represents the heading angle (in degrees) and the horizontal paramater `x` represents altitude in kilometers:
 
-<img src="https://space-resources.s3.fr-par.scw.cloud/cycloid_angle_graph.svg" width="100%" />
+<img src="https://space-resources.s3.fr-par.scw.cloud/cycloid_angle_graph_v2.svg" width="100%" />
