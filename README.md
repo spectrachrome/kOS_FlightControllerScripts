@@ -18,4 +18,4 @@ The equation shown here is the [cycloid curve equation](https://en.wikipedia.org
 
 <img src="https://space-resources.s3.fr-par.scw.cloud/cycloid_angle_graph_thin.svg" width="100%" />
 
-The engine will shut off once the apoapsis is at the target distance, so only a part of the curve will be actually relevant during the thrust maneuver. The exact ratio depends on the configuration of the rocket.
+The engine will shut off once the apoapsis is at the target distance, so only during a part of the curve thrust will be actually applied. The exact time for shut-off depends on the configuration of the rocket.
