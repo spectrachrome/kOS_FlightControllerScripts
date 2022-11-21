@@ -34,7 +34,7 @@ function addManeuverToFlightPlan {
 
 function calculateStartTime {
     parameter m.
-    set startTime to time:seconds + m:eta - maneuverBurnTime(m) / 2.
+    local startTime is time:seconds + m:eta - maneuverBurnTime(m) / 2.
 }
 
 function lockSteeringAtManeuverTarget {
@@ -95,14 +95,28 @@ until Ship:Apoapsis > 250000 {
 }.
 
 
-// SET GRAVITY_PARAM TO CONSTANT:G * KERBIN:MASS.
-// set r_apo to ship:apoapsis + 600000.
-// //Vis-viva equation to give speed we'll have at apoapsis.
-// set v_apo to SQRT(GRAVITY_PARAM * ((2 / r_apo) - (1 / SHIP:ORBIT:SEMIMAJORAXIS))).
-// //Vis-viva equation to calculate speed we want at apoapsis for a circular orbit. 
-// //For a circular orbit, desired SMA = radius of apoapsis.
-// set v_apo_wanted to SQRT(GRAVITY_PARAM * ((2 / r_apo) - (1 / r_apo))). 
-// set circ_delta_v to v_apo_wanted - v_apo.
+set gravityParameter to Constant:G * Kerbin:Mass.
+set r_apo to ship:apoapsis + 600000.
+//Vis-viva equation to give speed we'll have at apoapsis.
+set v_apo to sqrt(gravityParameter * ((2 / r_apo) - (1 / Ship:Orbit:SemiMajorAxis))).
+//Vis-viva equation to calculate speed we want at apoapsis for a circular orbit. 
+//For a circular orbit, desired SMA = radius of apoapsis.
+set v_apo_wanted to sqrt(gravityParameter * ((2 / r_apo) - (1 / r_apo))). 
+set circ_delta_v to v_apo_wanted - v_apo.
+
+// The upper stage of the small probe burns 1849m/s in 79.4s, from which we can calculate our burn.
+set burnTime to 79.4 * (circ_delta_v / 1849).
+
+lock Steering to Prograde.
+
+// Wait until we are half of the burn time before apoapsis, for an equal burn.
+wait until Eta:Apoapsis < burnTime / 2.
+
+lock throttle to 1.0.
+
+wait until Ship:Periapsis >= 250000.
+
+lock throttle to 0.0.
 
 // Upper stage fuel flow (even drain):
 //
