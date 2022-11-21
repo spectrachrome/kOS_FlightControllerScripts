@@ -16,6 +16,6 @@ This calculates the ascent angle from the planned apoapsis height and the curren
 
 The equation shown here is the [cycloid curve equation](https://en.wikipedia.org/wiki/Cycloid#Equations) for the `y` parameter, which has been transformed to yield the tilt angle `θ` (referred to as `t` in the article) which represents how many degrees our spacecraft will pitch eastwards during the ascent. The graph traced by this equation looks like this, where the vertical parameter `θ` represents eastward heading angle in degrees and the horizontal paramater `x` represents altitude in kilometers:
 
-<img src="https://space-resources.s3.fr-par.scw.cloud/cycloid_angle_graph_v2.svg" width="100%" />
+<img src="https://space-resources.s3.fr-par.scw.cloud/cycloid_angle_graph_thin.svg" width="100%" />
 
 The engine will shut off once the apoapsis is at the target distance, so only a part of the curve will be actually relevant during the thrust maneuver. The exact ratio depends on the configuration of the rocket.
