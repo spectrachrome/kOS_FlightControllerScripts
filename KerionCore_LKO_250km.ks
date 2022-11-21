@@ -118,6 +118,9 @@ wait until Ship:Periapsis >= 250000.
 
 lock throttle to 0.0.
 
+print "Eta Apoapsis:".
+print Eta:Apoapsis.
+
 // Upper stage fuel flow (even drain):
 //
 // LF: 131.106/sec
