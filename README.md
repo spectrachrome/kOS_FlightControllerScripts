@@ -4,7 +4,7 @@ This repository is a personal collection of mine, which contains scripts that ca
 
 ## [Initiating a Sub-Orbital Burn](#initiating-suborbital-burn)
 
-For now, we'll use the following formula to calculate how much we need to pitch sideways during the ascent, roughly simulating a gravity turn and thus making sure the vehicle will not experience large aerodynamic stresses during flight.
+For now, we'll use the following formula to calculate how much we need to pitch sideways during the ascent, roughly simulating a gravity turn and thus making sure the vehicle follows a fuel-efficient path and does not not experience large aerodynamic stresses during flight.
 
 <!--
   This Markdown README file features special SVG files which adapt their content's color to the surrounding dark or light theme of the operating system and browser, optimizing contrast. This
