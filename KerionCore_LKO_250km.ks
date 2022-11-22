@@ -61,14 +61,15 @@ function getCycloidAngleAtAltitude {
     local altitude is round(max(0.001, ((Altitude-Geoposition:TerrainHeight) - 100)),3).
 }
 
-rcs on.
-
-lock throttle to 1.0.
-
 from {local countdown is 10.} until countdown = 0 step {set countdown to countdown - 1.} do {
     print countdown.
     wait 1.
 }
+
+rcs on.
+sas off.
+
+lock throttle to 1.0.
 
 //
 ////////////////////////////////
