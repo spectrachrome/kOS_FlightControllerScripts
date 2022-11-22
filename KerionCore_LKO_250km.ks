@@ -97,7 +97,10 @@ until Ship:Apoapsis > 250000 {
     // joystick will pitch eastwards depending on altitude.
     //
     // 90 - acos(...) = asin(...)
-    set steer to Heading(90, arcsin(1 - currentAltitude / 125000) * Constant:RadToDeg).
+    //set steer to Heading(90, arcsin(1 - currentAltitude / 125000) * Constant:RadToDeg).
+    set angle to arcsin(1 - currentAltitude / 125000) * Constant:RadToDeg.
+    print angle.
+    set steer to Heading(90, angle).
 }.
 
 stage.
