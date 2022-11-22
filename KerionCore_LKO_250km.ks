@@ -87,12 +87,12 @@ lock Steering to Heading(90, degreesEastward).
 
 // Set the apoapsis at 250 kilometers above Kerbin.
 until Ship:Apoapsis > 250000 {
-    SET currentAltitude TO ROUND(MAX(0.001, ((Altitude-Geopisition:TerrainHeight) - 100)), 3).
+    SET currentAltitude TO ROUND(MAX(0.001, ((Altitude-Geoposition:TerrainHeight) - 100)), 3).
     // This equation was taken from the Wikipedia article for the `y` parameter of the cycloid curve
     // and resolved for `t` to get the tilt angle in radians for the current altitude, which is then
     // converted to degrees and subtracted from 90. The resulting number represents how far the
     // joystick will pitch eastwards depending on altitude.
-    set degreesEastward to arcsin(1 - currentAltitude / 125000).
+    set degreesEastward to 90 - arcsin(1 - currentAltitude / 125000).
 }.
 
 
