@@ -100,6 +100,10 @@ until Ship:Apoapsis > 250000 {
     set steer to Heading(90, arcsin(1 - currentAltitude / 125000) * Constant:RadToDeg).
 }.
 
+stage.
+
+set maxDeltaV to Ship:StageDeltaV(Ship:StageNum):Current.
+
 
 set gravityParameter to Constant:G * Kerbin:Mass.
 set r_apo to ship:apoapsis + 600000.
@@ -110,8 +114,8 @@ set v_apo to sqrt(gravityParameter * ((2 / r_apo) - (1 / Ship:Orbit:SemiMajorAxi
 set v_apo_wanted to sqrt(gravityParameter * ((2 / r_apo) - (1 / r_apo))). 
 set circ_delta_v to v_apo_wanted - v_apo.
 
-// The upper stage of the small probe burns 1849m/s in 79.4s, from which we can calculate our burn.
-set burnTime to 79.4 * (circ_delta_v / 1849).
+// The upper stage of the small probe burns 1874m/s in 37.07s, from which we can calculate our burn.
+set burnTime to 37.07 * (circ_delta_v / 1874).
 
 lock Steering to Prograde.
 
