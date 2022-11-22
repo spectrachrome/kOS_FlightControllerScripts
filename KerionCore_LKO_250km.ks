@@ -92,7 +92,7 @@ until Ship:Apoapsis > 250000 {
     // and resolved for `t` to get the tilt angle in radians for the current altitude, which is then
     // converted to degrees and subtracted from 90. The resulting number represents how far the
     // joystick will pitch eastwards depending on altitude.
-    set degreesEastward to 90 - arcsin(1 - currentAltitude / 125000).
+    set degreesEastward to (Constant:Pi / 2 - arccos(1 - currentAltitude / 125000)) * Constant:RadToDeg.
 }.
 
 
