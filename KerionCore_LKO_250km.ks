@@ -99,6 +99,9 @@ until Ship:Apoapsis > 250000 {
     // 90 - acos(...) = asin(...)
     //set steer to Heading(90, arcsin(1 - currentAltitude / 125000) * Constant:RadToDeg).
     set angle to arcsin(1 - currentAltitude / 125000) * 180 / Constant:Pi.
+    print "ALTITUDE:".
+    print currentAltitude.
+    print "ANGLE:".
     print angle.
     set steer to Heading(90, angle).
 }.
