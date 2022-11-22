@@ -82,8 +82,8 @@ when MAXTHRUST = 0 then {
     preserve.
 }.
 
-set degreesEastward to 90.
-lock Steering to Heading(90, degreesEastward).
+set steer to Heading(90, 90).
+lock Steering to steer.
 
 // Set the apoapsis at 250 kilometers above Kerbin.
 until Ship:Apoapsis > 250000 {
@@ -94,7 +94,7 @@ until Ship:Apoapsis > 250000 {
     // joystick will pitch eastwards depending on altitude.
     //
     // 90 - acos(...) = asin(...)
-    set degreesEastward to arcsin(1 - currentAltitude / 125000) * Constant:RadToDeg.
+    set steer to Heading(90, arcsin(1 - currentAltitude / 125000) * Constant:RadToDeg).
 }.
 
 
