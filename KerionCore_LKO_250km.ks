@@ -108,8 +108,6 @@ until Ship:Apoapsis > 250000 {
 
 lock throttle to 0.0.
 
-stage.
-
 set maxDeltaV to Ship:StageDeltaV(Ship:StageNum):Current.
 
 
