@@ -126,6 +126,9 @@ set circ_delta_v to v_apo_wanted - v_apo.
 // The upper stage of the small probe burns 1874m/s in 37.07s, from which we can calculate our burn.
 set burnTime to 37.07 * (circ_delta_v / 1874).
 
+print "ESTIMATED BURN TIME:".
+print burnTime.
+
 lock Steering to Prograde.
 
 // Wait until we are half of the burn time before apoapsis, for an equal burn.
