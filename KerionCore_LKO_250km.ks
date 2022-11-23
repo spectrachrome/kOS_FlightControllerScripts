@@ -133,7 +133,7 @@ lock Steering to Prograde.
 
 // Wait until we are half of the burn time before apoapsis, for an equal burn.
 until Eta:Apoapsis < burnTime / 2 {
-    print Eta:Apopsis.
+    print Eta:Apoapsis.
 }.
 
 lock throttle to 1.0.
