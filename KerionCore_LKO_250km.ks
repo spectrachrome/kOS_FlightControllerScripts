@@ -100,7 +100,13 @@ until Ship:Apoapsis > 250000 {
     //set steer to Heading(90, arcsin(1 - currentAltitude / 125000) * Constant:RadToDeg).
     set angle to arcsin(1 - currentAltitude / 125000).
     set steer to Heading(90, angle).
+
+    if MAXTHRUST = 0 {
+        stage.
+    }
 }.
+
+lock throttle to 0.0.
 
 stage.
 
