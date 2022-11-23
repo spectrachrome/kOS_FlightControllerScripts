@@ -102,7 +102,7 @@ until Ship:Apoapsis > 250000 {
     set angle to arcsin(1 - currentAltitude / 125000).
     set steer to Heading(90, angle).
     // Make sure to decrease thrust over time in a linear fashion.
-    set t to (-1) * (1 / 75) * currentAltitude + 1.
+    set t to (-1) * (1 / 75000) * currentAltitude + 1.
 
     if MAXTHRUST = 0 {
         stage.
