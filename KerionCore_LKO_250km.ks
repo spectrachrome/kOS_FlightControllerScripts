@@ -66,11 +66,6 @@ from {local countdown is 10.} until countdown = 0 step {set countdown to countdo
     wait 1.
 }
 
-rcs on.
-sas off.
-
-lock throttle to 1.0.
-
 //
 ////////////////////////////////
 //
@@ -84,6 +79,12 @@ lock throttle to 1.0.
 //     stage.
 //     preserve.
 // }.
+
+rcs on.
+sas off.
+
+set t to 1.0.
+lock throttle to t.
 
 set steer to Heading(90, 90).
 lock Steering to steer.
@@ -100,6 +101,8 @@ until Ship:Apoapsis > 250000 {
     //set steer to Heading(90, arcsin(1 - currentAltitude / 125000) * Constant:RadToDeg).
     set angle to arcsin(1 - currentAltitude / 125000).
     set steer to Heading(90, angle).
+    // Make sure to decrease thrust over time in a linear fashion.
+    set t to (-1) * (1 / 75) * currentAltitude + 1.
 
     if MAXTHRUST = 0 {
         stage.
